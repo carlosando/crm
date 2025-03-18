@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-16"?>
+<utopy>
+  <license>
+    <client>Genesys Internal</client>
+    <macAddress>B8-2A-72-D9-87-DC</macAddress>
+    <expiration>01/01/2023</expiration>
+    <maxCallProcessing>100</maxCallProcessing>
+    <maxVersion>8</maxVersion>
+    <maxSubVersion>5</maxSubVersion>
+    <smartComplianceEnabled>False</smartComplianceEnabled>
+    <smartEnterpriseEnabled>True</smartEnterpriseEnabled>
+    <coachingEnabled>False</coachingEnabled>
+    <QMEnabled>True</QMEnabled>
+    <textAnalyticsEnabled>True</textAnalyticsEnabled>
+    <AnalyticsEnabled>True</AnalyticsEnabled>
+    <RecordingEnabled>True</RecordingEnabled>
+  </license>
+  <signature>GXdgsaQeF6YBSedCSZCLzFZnCivcdudS+R6fMHADrIi7K6rr+M1SH0PPnh7f6+XiC7kSczGYa9KmfDmnStrrwA0CJX8er+/hCT17XHTbQU73068DP4mQWgp51YVo4cVpWolITlurQBL5Yl3NbJhkdRgKypw8ahf96DVZuz1ZhE54h+/uGsGvZz5p64aj1QfAEZ5Zi/7odvq/Sr4sIdphfPLEh+NrLjH4CL2u7dFXayBF3i3IuBqHZfoc9S5bOsXxsPmx4LSh2HR+ujEUikAhHKJtYLzTTogXa6yJjHU+V3MHZXwHs9D+QlqHabw2YW5bJfXSE52DW7A16Wt18GSYgJ737fZT9IgJ1K9JYMhazWWLsS0+DAd28dHOJuNfWwFUFUtX5Lqcp1E+UIbEjhyXeSx5R1LwoVLCtmLpks+pF1K/RCaj1t6zrn6yfKegt9eyJXBvaYAIyEtYKIU6K4Viay293NldIc/35mAgKvmf4ZNeRqFYDVrCYdGzcuSL0AeP6VONWftwQTUUwkV8IL4d2NQhVDf2nLLW6xtkTh0IugG4JhwbQvV8+NP+XcDhaiUF9AO4wagH67U0+nLfjJW5AvqDw0aWrUsuckZMvixg68/cF0XB8rgKAjcdv+3sJfDXm9/mdc4DtApRIFhRSKzvqFmV4EQnen0AfliTtUGOsf+DNi+RAccqw/1j/SNBFUXcTPZj5J9C7pcq2vQwRKCoew==</signature>
+</utopy>

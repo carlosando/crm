@@ -1,0 +1,139 @@
+<head>
+    <script src="scripts/crm-mock-script.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/example.css">
+	
+</head>
+<html lang="pt-BR">
+<head>
+    <script src="/scripts/example.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embeddable C R M</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 60px; /* Garante espaço para o conteúdo sem sobrepor os iframes */
+        }
+        #softphone {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 350px;
+            height: 600px;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            background: white;
+        }
+        #digitalinteractions {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 1500;
+            height: 400px;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: white;
+            z-index: 1000;
+        }
+    </style>
+
+</head>
+<body class="bg-gray-100">
+<!-- 
+    <iframe id="softphone" allow="camera *; microphone *; autoplay *" src="https://apps.sae1.pure.cloud/crm/index.html?crm=embeddableFramework.html&enableFrameworkClientId=true&orgName=scsbrazil"></iframe> 
+-->
+
+<!--
+    <iframe id="softphone" allow="camera *; microphone *; autoplay *" src="https://apps.sae1.pure.cloud/crm/index.html?crm=embeddableFramework.html&enableFrameworkClientId=true&orgName=scsbrazil"></iframe> 
+-->
+
+    <iframe id="softphone" allow="camera *; microphone *; autoplay *; hid*" src="https://apps.sae1.pure.cloud/crm/index.html?crm=framework-local-secure"> </iframe>
+
+    <iframe id="digitalinteractions" allow="camera *; microphone *; autoplay *; hid *" src="https://apps.sae1.pure.cloud/crm/interaction.html">
+</iframe>
+   
+    <div class="container mx-auto p-6">
+        <header class="bg-white shadow p-4 flex justify-between items-center relative">
+            <div class="flex items-center space-x-4">
+                <img src="https://1000logos.net/wp-content/uploads/2017/09/Santander-Logo-2007.png" alt="Santander Logo" class="h-10">
+                <h1 class="text-xl font-bold">Embeddable :: C R M</h1>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">Sair</button>
+        </header>
+        
+        <div class="grid grid-cols-4 gap-4 mt-6">
+            <!-- Menu lateral -->
+            <aside class="col-span-1 bg-white p-4 shadow rounded">
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-blue-500">Dashboard</a></li>
+                    <li><a href="#" class="text-gray-700">Contatos</a></li>
+                    <li><a href="#" class="text-gray-700">Oportunidades</a></li>
+                    <li><a href="#" class="text-gray-700">Relatórios</a></li>
+                    <li>
+                        <label class="block text-gray-700 mt-4">Status</label>
+                        <select id='statusDropDown' class="w-full border p-2 rounded">
+                            <option value="AVAILABLE">Available</option>
+                            <option value="AWAY">Away</option>
+                            <option value="ON_QUEUE">On Queue</option>
+                        </select>
+ 			<button id="updateUserStatus" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded w-full" onclick="updateUserStatus()">Alterar Status</button>
+
+                    </li>
+          
+                </ul>
+            </aside>
+            
+            <!-- Área principal -->
+            <main class="col-span-3 bg-white p-6 shadow rounded">
+                <h2 class="text-lg font-semibold mb-4">Informações do Cliente</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700">Nome</label>
+                        <input type="text" class="w-full border p-2 rounded" placeholder="Nome do Cliente">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Empresa</label>
+                        <input type="text" class="w-full border p-2 rounded" placeholder="Empresa">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">E-mail</label>
+                        <input type="email" class="w-full border p-2 rounded" placeholder="email@dominio.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Telefone</label>
+                        <input type="text" class="w-full border p-2 rounded" placeholder="(XX) XXXX-XXXX">
+                    </div>
+                </div>
+                <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded">Salvar</button>
+            </main>
+        </div>
+        
+        <!-- Seção de cotações financeiras -->
+        <section class="mt-6 bg-white p-6 shadow rounded">
+            <h2 class="text-lg font-semibold mb-4">Cotações Financeiras</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="text-gray-700 font-bold">Bolsa de Valores</h3>
+                    <p class="text-green-500">+1,25% (120.500 pts)</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="text-gray-700 font-bold">Dólar</h3>
+                    <p class="text-red-500">-0,80% (R$ 5,688)</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="text-gray-700 font-bold">Euro</h3>
+                    <p class="text-green-500">+0,45% (R$ 6,213)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Interactions iframe repositioned -->
+        <div class="mt-6">
+            <iframe id="digitalinteractions" allow="camera *; microphone *; autoplay *; hid *" src="https://apps.sae1.pure.cloud/crm/interaction.html"> </iframe>
+        </div>
+    </div>
+</body>
